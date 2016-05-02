@@ -29,7 +29,8 @@ namespace sysconfig
 
             if(verifica == "opcr2wzscar")
             {
-                MessageBox.Show("Teste ok");
+                frmSysConfig frmSysConfig = new frmSysConfig();
+                frmSysConfig.ShowDialog();
             }
             else
             {

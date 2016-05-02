@@ -63,9 +63,49 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap databasesystem {
+            get {
+                object obj = ResourceManager.GetObject("databasesystem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitsystem {
+            get {
+                object obj = ResourceManager.GetObject("exitsystem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap frmLoginFundo {
             get {
                 object obj = ResourceManager.GetObject("frmLoginFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sistemapng {
+            get {
+                object obj = ResourceManager.GetObject("sistemapng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap systemicon {
+            get {
+                object obj = ResourceManager.GetObject("systemicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

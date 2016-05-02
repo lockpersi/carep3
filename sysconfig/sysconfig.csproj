@@ -97,6 +97,18 @@
   <ItemGroup>
     <None Include="Resources\frmLoginFundo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sistemapng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databasesystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitsystem.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
