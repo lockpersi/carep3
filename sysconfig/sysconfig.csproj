@@ -61,6 +61,14 @@
     <Compile Include="frmSysLogin.Designer.cs">
       <DependentUpon>frmSysLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSysSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysSystem.Designer.cs">
+      <DependentUpon>frmSysSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="md5crypt.cs" />
+    <Compile Include="parametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmSysConfig.resx">
       <DependentUpon>frmSysConfig.cs</DependentUpon>
@@ -70,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSysLogin.zu-ZA.resx">
       <DependentUpon>frmSysLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysSystem.resx">
+      <DependentUpon>frmSysSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

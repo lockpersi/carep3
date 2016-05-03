@@ -12,9 +12,13 @@ namespace sysconfig
 {
     public partial class frmSysConfig : Form
     {
+
+
+
         public frmSysConfig()
         {
             InitializeComponent();
+            AtualizaInfo("Teste de funcionamento");
         }
 
         /// <summary>
@@ -23,6 +27,33 @@ namespace sysconfig
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        /// <summary>
+        /// Atualiza Status Info
+        /// </summary>
+        /// <param name="infoatualiza"></param>
+        public void AtualizaInfo(string infoatualiza)
+        {
+            lblInfo.Text = infoatualiza;
+        }
+
+        /// <summary>
+        /// Evento de click do botão Sistema do frmSysConfig
+        /// </summary>
+        private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<frmSysSystem>().Count() > 0)
+            {
+                MessageBox.Show("A janela já está aberta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+               
+                frmSysSystem frmSysSystem = new frmSysSystem(this);
+                frmSysSystem.MdiParent = this;
+                frmSysSystem.Show();
+            }
         }
     }
 }

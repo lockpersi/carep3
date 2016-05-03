@@ -123,7 +123,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value> </value>
+    <value>*</value>
   </data>
   <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 20</value>
