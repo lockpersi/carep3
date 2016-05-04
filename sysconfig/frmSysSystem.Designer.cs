@@ -67,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(840, 363);
+            this.ClientSize = new System.Drawing.Size(840, 360);
             this.ControlBox = false;
             this.Controls.Add(this.gbEmpresa);
             this.Controls.Add(this.btnSair);
@@ -80,6 +80,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSysSystem_Load);
             this.gbEmpresa.ResumeLayout(false);
             this.gbEmpresa.PerformLayout();
             this.ResumeLayout(false);

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSysBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysBanco.Designer.cs">
+      <DependentUpon>frmSysBanco.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSysConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="md5crypt.cs" />
     <Compile Include="parametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmSysBanco.resx">
+      <DependentUpon>frmSysBanco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSysConfig.resx">
       <DependentUpon>frmSysConfig.cs</DependentUpon>
     </EmbeddedResource>
