@@ -55,7 +55,7 @@ namespace sysconfig
             }
             else if (Application.OpenForms.OfType<frmSysBanco>().Count() > 0)
             {
-                MessageBox.Show("Você deve fechar a outra janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -73,6 +73,10 @@ namespace sysconfig
             if (Application.OpenForms.OfType<frmSysBanco>().Count() > 0)
             {
                 MessageBox.Show("A janela já está aberta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysSystem>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
