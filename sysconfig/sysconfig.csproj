@@ -73,9 +73,12 @@
     <Compile Include="frmSysSystem.Designer.cs">
       <DependentUpon>frmSysSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="md5crypt.cs" />
+    <Compile Include="mascaras.cs" />
+    <Compile Include="Models\frmSysSystem.cs" />
     <Compile Include="parametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regras\frmSysSystem.cs" />
+    <Compile Include="StringsBD\frmSysSystem.cs" />
     <EmbeddedResource Include="frmSysBanco.resx">
       <DependentUpon>frmSysBanco.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +104,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +133,13 @@
   <ItemGroup>
     <None Include="Resources\exitsystem.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bd\bd.csproj">
+      <Project>{01ed50d8-32ef-4954-8525-d48c8ea2e665}</Project>
+      <Name>bd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

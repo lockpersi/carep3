@@ -101,6 +101,7 @@
             // 
             this.txtSenhaAcesso.Location = new System.Drawing.Point(183, 120);
             this.txtSenhaAcesso.Name = "txtSenhaAcesso";
+            this.txtSenhaAcesso.PasswordChar = '*';
             this.txtSenhaAcesso.Size = new System.Drawing.Size(131, 25);
             this.txtSenhaAcesso.TabIndex = 9;
             // 
@@ -230,7 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(823, 350);
+            this.ClientSize = new System.Drawing.Size(819, 346);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbAtualizacao);

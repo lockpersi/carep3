@@ -168,8 +168,8 @@ namespace sysconfig
         /// </summary>
         private void verificaConexaoBanco()
         {
-            SqlConnection conn = null;
-            conn = new SqlConnection(@"Data Source = " + IpServidor + "," + Porta + "; Initial Catalog = " + BancoDados + "; User ID = " + NomeUsuario + "; Password = " + SenhaAcesso + ";");
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = bd.dados.StringDeConexao;
             try
             {
                 conn.Open();
