@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSysConfig));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lblInfo = new System.Windows.Forms.ToolStripStatusLabel();
@@ -35,6 +36,7 @@
             this.bancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.módulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -45,10 +47,11 @@
             this.sistemaToolStripMenuItem,
             this.bancoDeDadosToolStripMenuItem,
             this.sairToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.módulosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(843, 73);
+            this.menuStrip1.Size = new System.Drawing.Size(837, 73);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,9 +59,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblInfo});
-            this.statusStrip.Location = new System.Drawing.Point(0, 440);
+            this.statusStrip.Location = new System.Drawing.Point(0, 439);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(843, 22);
+            this.statusStrip.Size = new System.Drawing.Size(837, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -73,7 +76,7 @@
             // sistemaToolStripMenuItem
             // 
             this.sistemaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.sistemaToolStripMenuItem.Image = global::sysconfig.Properties.Resources.systemicon;
+            this.sistemaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sistemaToolStripMenuItem.Image")));
             this.sistemaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.sistemaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sistemaToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
@@ -88,7 +91,7 @@
             // bancoDeDadosToolStripMenuItem
             // 
             this.bancoDeDadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bancoDeDadosToolStripMenuItem.Image = global::sysconfig.Properties.Resources.databasesystem;
+            this.bancoDeDadosToolStripMenuItem.Image = global::sysconfig.Properties.Resources.bancodados;
             this.bancoDeDadosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bancoDeDadosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bancoDeDadosToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
@@ -107,14 +110,14 @@
             this.sairToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(60, 69);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Text = "Fechar";
             this.sairToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.usuariosToolStripMenuItem.Image = global::sysconfig.Properties.Resources.usuarios;
+            this.usuariosToolStripMenuItem.Image = global::sysconfig.Properties.Resources.usuario;
             this.usuariosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
@@ -124,11 +127,23 @@
             this.usuariosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
+            // módulosToolStripMenuItem
+            // 
+            this.módulosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.módulosToolStripMenuItem.Image = global::sysconfig.Properties.Resources.modulos;
+            this.módulosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.módulosToolStripMenuItem.Name = "módulosToolStripMenuItem";
+            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(66, 69);
+            this.módulosToolStripMenuItem.Text = "Módulos";
+            this.módulosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.módulosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.módulosToolStripMenuItem.Click += new System.EventHandler(this.módulosToolStripMenuItem_Click);
+            // 
             // frmSysConfig
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(843, 462);
+            this.ClientSize = new System.Drawing.Size(837, 461);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
@@ -160,5 +175,6 @@
         public System.Windows.Forms.ToolStripStatusLabel lblInfo;
         public System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem módulosToolStripMenuItem;
     }
 }

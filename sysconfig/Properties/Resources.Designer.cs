@@ -93,9 +93,9 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap databasesystem {
+        internal static System.Drawing.Bitmap bancodados {
             get {
-                object obj = ResourceManager.GetObject("databasesystem", resourceCulture);
+                object obj = ResourceManager.GetObject("bancodados", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +123,16 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap modulos {
+            get {
+                object obj = ResourceManager.GetObject("modulos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sistemapng {
             get {
                 object obj = ResourceManager.GetObject("sistemapng", resourceCulture);
@@ -143,9 +153,9 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap usuarios {
+        internal static System.Drawing.Bitmap usuario {
             get {
-                object obj = ResourceManager.GetObject("usuarios", resourceCulture);
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

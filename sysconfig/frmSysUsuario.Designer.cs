@@ -39,7 +39,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(752, 330);
+            this.btnSair.Location = new System.Drawing.Point(747, 330);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(835, 352);
+            this.ClientSize = new System.Drawing.Size(831, 355);
             this.ControlBox = false;
             this.Controls.Add(this.btnAtivarInativar);
             this.Controls.Add(this.btnAdicionarUsu);

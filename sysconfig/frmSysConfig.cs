@@ -61,6 +61,10 @@ namespace sysconfig
             {
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (Application.OpenForms.OfType<frmSysModulos>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 frmSysSystem frmSysSystem = new frmSysSystem(this);
@@ -86,6 +90,10 @@ namespace sysconfig
             {
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (Application.OpenForms.OfType<frmSysModulos>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 frmSysUsuario frmSysUsuario = new frmSysUsuario(this);
@@ -93,6 +101,35 @@ namespace sysconfig
                 frmSysUsuario.Show();
             }
 
+        }
+
+        /// <summary>
+        /// Evento de click do botão Modulos do frmSysConfig
+        /// </summary>
+        private void módulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<frmSysModulos>().Count() > 0)
+            {
+                MessageBox.Show("A janela já está aberta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysBanco>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysUsuario>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysSystem>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                frmSysModulos frmSysModulos = new frmSysModulos(this);
+                frmSysModulos.MdiParent = this;
+                frmSysModulos.Show();
+            }
         }
 
         /// <summary>
@@ -109,6 +146,10 @@ namespace sysconfig
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if(Application.OpenForms.OfType<frmSysUsuario>().Count() > 0){
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysModulos>().Count() > 0)
+            {
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else

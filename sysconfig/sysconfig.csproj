@@ -73,6 +73,12 @@
     <Compile Include="frmSysLogin.Designer.cs">
       <DependentUpon>frmSysLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSysModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysModulos.Designer.cs">
+      <DependentUpon>frmSysModulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSysSystem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +96,10 @@
     <Compile Include="Models\frmSysUsuario.cs" />
     <Compile Include="parametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regras\frmSysModulos.cs" />
     <Compile Include="Regras\frmSysSystem.cs" />
     <Compile Include="Regras\frmSysUsuario.cs" />
+    <Compile Include="StringsBD\frmSysModulos.cs" />
     <Compile Include="StringsBD\frmSysSystem.cs" />
     <Compile Include="StringsBD\frmSysUsuario.cs" />
     <EmbeddedResource Include="frmSysAddUsu.resx">
@@ -108,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSysLogin.zu-ZA.resx">
       <DependentUpon>frmSysLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysModulos.resx">
+      <DependentUpon>frmSysModulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSysSystem.resx">
       <DependentUpon>frmSysSystem.cs</DependentUpon>
@@ -146,12 +157,6 @@
     <None Include="Resources\sistemapng.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\systemicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\databasesystem.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\exitsystem.png" />
   </ItemGroup>
   <ItemGroup>
@@ -159,9 +164,6 @@
       <Project>{01ed50d8-32ef-4954-8525-d48c8ea2e665}</Project>
       <Name>bd</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usuarios.PNG" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -174,6 +176,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bancodados1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modulos1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
