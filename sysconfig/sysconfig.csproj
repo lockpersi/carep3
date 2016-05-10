@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSysAddUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysAddUsu.Designer.cs">
+      <DependentUpon>frmSysAddUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSysBanco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +79,24 @@
     <Compile Include="frmSysSystem.Designer.cs">
       <DependentUpon>frmSysSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSysUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysUsuario.Designer.cs">
+      <DependentUpon>frmSysUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="mascaras.cs" />
     <Compile Include="Models\frmSysSystem.cs" />
+    <Compile Include="Models\frmSysUsuario.cs" />
     <Compile Include="parametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Regras\frmSysSystem.cs" />
+    <Compile Include="Regras\frmSysUsuario.cs" />
     <Compile Include="StringsBD\frmSysSystem.cs" />
+    <Compile Include="StringsBD\frmSysUsuario.cs" />
+    <EmbeddedResource Include="frmSysAddUsu.resx">
+      <DependentUpon>frmSysAddUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSysBanco.resx">
       <DependentUpon>frmSysBanco.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSysSystem.resx">
       <DependentUpon>frmSysSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysUsuario.resx">
+      <DependentUpon>frmSysUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,7 +160,21 @@
       <Name>bd</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\usuarios.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ativarinativar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

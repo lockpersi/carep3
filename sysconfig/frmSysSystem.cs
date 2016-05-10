@@ -189,6 +189,39 @@ namespace sysconfig
             txtCNPJ.SelectionStart = txtCNPJ.Text.Length + 1;
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Models.frmSysSystem DadosSystemEmpresa = new Models.frmSysSystem();
+
+            DadosSystemEmpresa.RazaoSocial = txtRazaoSocial.Text;
+            DadosSystemEmpresa.NomeFantasia = txtFantasia.Text;
+            DadosSystemEmpresa.Cep = txtCEP.Text;
+            DadosSystemEmpresa.Logradouro = txtLogradouro.Text;
+            DadosSystemEmpresa.Numero = Convert.ToInt32(txtNumero.Text);
+            DadosSystemEmpresa.Complemento = txtComplemento.Text;
+            DadosSystemEmpresa.Bairro = txtBairro.Text;
+            DadosSystemEmpresa.Cidade = txtCidade.Text;
+            DadosSystemEmpresa.UF = cbUF.Text;
+            DadosSystemEmpresa.CNPJ = txtCNPJ.Text;
+            DadosSystemEmpresa.InscEstadual = txtEstadual.Text;
+            DadosSystemEmpresa.InscMunicipal = txtMunicipal.Text;
+            if(rbSimplesNacional.Checked == true)
+            {
+                DadosSystemEmpresa.RegimeTributario = rbSimplesNacional.Text;
+            }
+            else if(rbLucroPresumido.Checked == true)
+            {
+                DadosSystemEmpresa.RegimeTributario = rbLucroPresumido.Text;
+            }
+            else
+            {
+                DadosSystemEmpresa.RegimeTributario = rbLucroReal.Text;
+            }
+            Regras.frmSysSystem obj = new Regras.frmSysSystem();
+            obj.Salvar(DadosSystemEmpresa);
+            MessageBox.Show("Dados salvos com sucesso");
+            this.Close();
+        }
     }
 
 }

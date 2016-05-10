@@ -8,11 +8,19 @@ namespace sysconfig.Regras
 {
     public class frmSysSystem
     {
-        public sysconfig.Models.frmSysSystem Pesquisar(sysconfig.Models.frmSysSystem System)
+        public Models.frmSysSystem Pesquisar(Models.frmSysSystem System)
         {
-            sysconfig.StringsBD.frmSysSystem obj = new sysconfig.StringsBD.frmSysSystem();
+            StringsBD.frmSysSystem obj = new StringsBD.frmSysSystem();
             obj.DadosRetorno(System);
             return System;
+        }
+
+        public void Salvar(Models.frmSysSystem DadosSystemEmpresa)
+        {
+
+            //se tudo esta ok chamada rotina DAL
+            StringsBD.frmSysSystem obj = new StringsBD.frmSysSystem();
+            obj.salvar(DadosSystemEmpresa);
         }
     }
 }

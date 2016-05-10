@@ -57,12 +57,42 @@ namespace sysconfig
             {
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (Application.OpenForms.OfType<frmSysUsuario>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 frmSysSystem frmSysSystem = new frmSysSystem(this);
                 frmSysSystem.MdiParent = this;
                 frmSysSystem.Show();
             }
+        }
+
+        /// <summary>
+        /// Evento que abre o menu frmSysUsuario
+        /// </summary>
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<frmSysUsuario>().Count() > 0)
+            {
+                MessageBox.Show("A janela já está aberta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysBanco>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Application.OpenForms.OfType<frmSysSystem>().Count() > 0)
+            {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                frmSysUsuario frmSysUsuario = new frmSysUsuario(this);
+                frmSysUsuario.MdiParent = this;
+                frmSysUsuario.Show();
+            }
+
         }
 
         /// <summary>
@@ -76,6 +106,9 @@ namespace sysconfig
             }
             else if (Application.OpenForms.OfType<frmSysSystem>().Count() > 0)
             {
+                MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(Application.OpenForms.OfType<frmSysUsuario>().Count() > 0){
                 MessageBox.Show("Você deve fechar a janela aberta para abrir uma nova", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
@@ -173,13 +206,21 @@ namespace sysconfig
             try
             {
                 conn.Open();
+
+                //Habilita Menus
                 sistemaToolStripMenuItem.Enabled = true;
+                usuariosToolStripMenuItem.Enabled = true;
+
                 conn.Close();
             }
             catch (SqlException sqle)
             {
                 conn = null;
+
+                //Desabilita Menus
                 sistemaToolStripMenuItem.Enabled = false;
+                usuariosToolStripMenuItem.Enabled = false;
+
                 lblInfo.Text = "Verifique os parametros de conexão com o banco";
             }
         }
