@@ -11,8 +11,21 @@ namespace sysconfig.Regras
     {
         public DataTable DadosRetorno(DataTable DadosModulos)
         {
-
+            StringsBD.frmSysModulos obj = new StringsBD.frmSysModulos();
+            obj.DadosRetorno(DadosModulos);
             return DadosModulos;
+        }
+
+        public void AdicionaDados(Models.frmSysModulos DadosModulo)
+        {
+            StringsBD.frmSysModulos obj = new StringsBD.frmSysModulos();
+            obj.AdicionaDados(DadosModulo);
+        }
+
+        public void DeletarModulo(int idmodulo)
+        {
+            StringsBD.frmSysModulos obj = new StringsBD.frmSysModulos();
+            obj.DeletarModulo(idmodulo);
         }
     }
 }

@@ -31,6 +31,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.dataGridViewUsu = new System.Windows.Forms.DataGridView();
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnAtivarInativar = new System.Windows.Forms.Button();
             this.btnAdicionarUsu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsu)).BeginInit();
@@ -39,7 +40,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(747, 330);
+            this.btnSair.Location = new System.Drawing.Point(740, 325);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 0;
@@ -62,16 +63,30 @@
             this.gbUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUsuarios.Location = new System.Drawing.Point(166, 2);
             this.gbUsuarios.Name = "gbUsuarios";
-            this.gbUsuarios.Size = new System.Drawing.Size(661, 325);
+            this.gbUsuarios.Size = new System.Drawing.Size(659, 322);
             this.gbUsuarios.TabIndex = 2;
             this.gbUsuarios.TabStop = false;
             this.gbUsuarios.Text = "Lista de Usuários";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = global::sysconfig.Properties.Resources.edit;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(12, 50);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(148, 35);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Editar Usuário";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAtivarInativar
             // 
             this.btnAtivarInativar.Image = global::sysconfig.Properties.Resources.ativarinativar;
             this.btnAtivarInativar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtivarInativar.Location = new System.Drawing.Point(12, 50);
+            this.btnAtivarInativar.Location = new System.Drawing.Point(12, 93);
             this.btnAtivarInativar.Name = "btnAtivarInativar";
             this.btnAtivarInativar.Size = new System.Drawing.Size(148, 35);
             this.btnAtivarInativar.TabIndex = 4;
@@ -101,8 +116,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(831, 355);
+            this.ClientSize = new System.Drawing.Size(827, 353);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAtivarInativar);
             this.Controls.Add(this.btnAdicionarUsu);
             this.Controls.Add(this.gbUsuarios);
@@ -129,5 +145,6 @@
         private System.Windows.Forms.GroupBox gbUsuarios;
         private System.Windows.Forms.Button btnAdicionarUsu;
         private System.Windows.Forms.Button btnAtivarInativar;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

@@ -49,6 +49,14 @@ namespace sysconfig.StringsBD
                 //command
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+
+                cmd.CommandText = "select count(*) from mnt_usuario where login = '" + DadosUsuario.Login + "';";
+                cn.Open();
+                int resultado = (int)cmd.ExecuteScalar();
+                if (resultado != 0)
+                {
+                    throw new Exception("Usuário já cadastrado");
+                }
                 cmd.CommandText = "insert into mnt_usuario(login, senha, nome, email, descricao, ativo) "+
                                   "values (@login, @senha, @nome, @email, @descricao, 'Ativo');";
                 cmd.Parameters.AddWithValue("@login", DadosUsuario.Login);
@@ -56,7 +64,6 @@ namespace sysconfig.StringsBD
                 cmd.Parameters.AddWithValue("@nome", DadosUsuario.Nome);
                 cmd.Parameters.AddWithValue("@email", DadosUsuario.Email);
                 cmd.Parameters.AddWithValue("@descricao", DadosUsuario.Descricao);
-                cn.Open();
                 cmd.ExecuteScalar();
             }
             catch (SqlException ex)
@@ -100,7 +107,75 @@ namespace sysconfig.StringsBD
             }
         }
 
-        } 
-    }
+        public Models.frmSysUsuario PupulaEdit(Models.frmSysUsuario DadosUsuario)
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = bd.dados.StringDeConexao;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "select * from mnt_usuario WHERE id_usuario = " + DadosUsuario.IdUsuario + ";";
+
+                cn.Open();
+                //enquanto leitor lê 
+                SqlDataReader leitor = cmd.ExecuteReader();
+                while (leitor.Read())
+                {
+                    //que será retornado 
+                    DadosUsuario.IdUsuario = DadosUsuario.IdUsuario;
+                    DadosUsuario.Login = leitor["login"].ToString();
+                    DadosUsuario.Nome = leitor["nome"].ToString();
+                    DadosUsuario.Senha = leitor["senha"].ToString();
+                    DadosUsuario.Email = leitor["email"].ToString();
+                    DadosUsuario.Descricao = leitor["descricao"].ToString();
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Servidor SQL Erro:" + ex.Number);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return DadosUsuario;
+        }
+
+        public void SalvaDados(Models.frmSysUsuario DadosUsuarios)
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = bd.dados.StringDeConexao;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update mnt_usuario set nome = '" + DadosUsuarios.Nome + "'," +
+                                  "senha = '" + DadosUsuarios.Senha + "', descricao = '"+ DadosUsuarios.Descricao + "',"+
+                                  "email = '"+ DadosUsuarios.Email + "' where id_usuario = " + DadosUsuarios.IdUsuario + ";";
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Servidor SQL Erro:" + ex.Number);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+    } 
+}
 
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnCriarUsuario = new System.Windows.Forms.Button();
+            this.btnCriarouSalvar = new System.Windows.Forms.Button();
             this.lblCodUsu = new System.Windows.Forms.Label();
             this.txtCodUsu = new System.Windows.Forms.TextBox();
             this.gbAtivoInativo = new System.Windows.Forms.GroupBox();
@@ -60,15 +60,15 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // btnCriarUsuario
+            // btnCriarouSalvar
             // 
-            this.btnCriarUsuario.Location = new System.Drawing.Point(347, 233);
-            this.btnCriarUsuario.Name = "btnCriarUsuario";
-            this.btnCriarUsuario.Size = new System.Drawing.Size(75, 23);
-            this.btnCriarUsuario.TabIndex = 1;
-            this.btnCriarUsuario.Text = "Criar Usuário";
-            this.btnCriarUsuario.UseVisualStyleBackColor = true;
-            this.btnCriarUsuario.Click += new System.EventHandler(this.btnCriarUsuario_Click);
+            this.btnCriarouSalvar.Location = new System.Drawing.Point(347, 233);
+            this.btnCriarouSalvar.Name = "btnCriarouSalvar";
+            this.btnCriarouSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnCriarouSalvar.TabIndex = 1;
+            this.btnCriarouSalvar.Text = "Criar Usuário";
+            this.btnCriarouSalvar.UseVisualStyleBackColor = true;
+            this.btnCriarouSalvar.Click += new System.EventHandler(this.btnCriarouSalvar_Click);
             // 
             // lblCodUsu
             // 
@@ -245,13 +245,14 @@
             this.Controls.Add(this.gbAtivoInativo);
             this.Controls.Add(this.txtCodUsu);
             this.Controls.Add(this.lblCodUsu);
-            this.Controls.Add(this.btnCriarUsuario);
+            this.Controls.Add(this.btnCriarouSalvar);
             this.Controls.Add(this.btnSair);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSysAddUsu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicionar novo Usuário";
             this.TopMost = true;
             this.gbAtivoInativo.ResumeLayout(false);
             this.gbAtivoInativo.PerformLayout();
@@ -265,7 +266,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnCriarUsuario;
+        private System.Windows.Forms.Button btnCriarouSalvar;
         private System.Windows.Forms.Label lblCodUsu;
         private System.Windows.Forms.TextBox txtCodUsu;
         private System.Windows.Forms.GroupBox gbAtivoInativo;

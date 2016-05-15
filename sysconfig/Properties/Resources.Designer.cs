@@ -103,6 +103,26 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deletar {
+            get {
+                object obj = ResourceManager.GetObject("deletar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exitsystem {
             get {
                 object obj = ResourceManager.GetObject("exitsystem", resourceCulture);
@@ -133,6 +153,16 @@ namespace sysconfig.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap programas {
+            get {
+                object obj = ResourceManager.GetObject("programas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sistemapng {
             get {
                 object obj = ResourceManager.GetObject("sistemapng", resourceCulture);
@@ -146,6 +176,16 @@ namespace sysconfig.Properties {
         internal static System.Drawing.Bitmap systemicon {
             get {
                 object obj = ResourceManager.GetObject("systemicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_edit {
+            get {
+                object obj = ResourceManager.GetObject("users_edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

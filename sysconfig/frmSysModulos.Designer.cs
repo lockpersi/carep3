@@ -31,6 +31,8 @@
             this.dataGridViewMod = new System.Windows.Forms.DataGridView();
             this.gbModulos = new System.Windows.Forms.GroupBox();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnAdicionarMod = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMod)).BeginInit();
             this.gbModulos.SuspendLayout();
             this.SuspendLayout();
@@ -50,14 +52,14 @@
             this.gbModulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbModulos.Location = new System.Drawing.Point(156, 1);
             this.gbModulos.Name = "gbModulos";
-            this.gbModulos.Size = new System.Drawing.Size(661, 325);
+            this.gbModulos.Size = new System.Drawing.Size(661, 321);
             this.gbModulos.TabIndex = 3;
             this.gbModulos.TabStop = false;
             this.gbModulos.Text = "Módulos Cadastrados";
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(731, 328);
+            this.btnSair.Location = new System.Drawing.Point(731, 324);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 2;
@@ -65,12 +67,42 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnAdicionarMod
+            // 
+            this.btnAdicionarMod.Image = global::sysconfig.Properties.Resources.add1;
+            this.btnAdicionarMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarMod.Location = new System.Drawing.Point(5, 12);
+            this.btnAdicionarMod.Name = "btnAdicionarMod";
+            this.btnAdicionarMod.Size = new System.Drawing.Size(148, 35);
+            this.btnAdicionarMod.TabIndex = 4;
+            this.btnAdicionarMod.Text = "Adicionar Módulo";
+            this.btnAdicionarMod.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdicionarMod.UseVisualStyleBackColor = true;
+            this.btnAdicionarMod.Click += new System.EventHandler(this.btnAdicionarMod_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Image = global::sysconfig.Properties.Resources.deletar;
+            this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.Location = new System.Drawing.Point(5, 53);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(148, 35);
+            this.btnDeletar.TabIndex = 5;
+            this.btnDeletar.Text = "Deletar Módulo";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
             // frmSysModulos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(817, 357);
+            this.ClientSize = new System.Drawing.Size(818, 347);
             this.ControlBox = false;
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnAdicionarMod);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.gbModulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -93,5 +125,7 @@
         private System.Windows.Forms.DataGridView dataGridViewMod;
         private System.Windows.Forms.GroupBox gbModulos;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnAdicionarMod;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }
