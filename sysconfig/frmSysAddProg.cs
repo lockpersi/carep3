@@ -24,5 +24,35 @@ namespace sysconfig
         {
             this.Close();
         }
+
+        /// <summary>
+        /// Metodo carrega CB Modulo
+        /// </summary>
+        private void CarregaCBModulo()
+        {
+            DataTable DadosModulo = new DataTable();
+            Regras.frmSysProgramas obj = new Regras.frmSysProgramas();
+            obj.CarregaCBModulos(DadosModulo);
+            cbModulos.ValueMember = "nome_modulo";
+            cbModulos.SelectedItem = "";
+            cbModulos.DataSource = DadosModulo;
+            cbModulos.Refresh();
+        }
+
+        /// <summary>
+        /// Construtor do frmSysAddProg
+        /// </summary>
+        private void frmSysAddProg_Load(object sender, EventArgs e)
+        {
+            CarregaCBModulo();
+        }
+
+        /// <summary>
+        /// Evento do btnAdicionarPrograma
+        /// </summary>
+        private void btnAdicionarPrograma_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

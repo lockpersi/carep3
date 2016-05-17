@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="mascaras.cs" />
     <Compile Include="Models\frmSysModulos.cs" />
+    <Compile Include="Models\frmSysProgramas.cs" />
     <Compile Include="Models\frmSysSystem.cs" />
     <Compile Include="Models\frmSysUsuario.cs" />
     <Compile Include="parametros.cs" />

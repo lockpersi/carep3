@@ -114,7 +114,7 @@ namespace sysconfig
         /// <summary>
         /// Evento de click do botão Modulos do frmSysConfig
         /// </summary>
-        private void módulosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.OfType<frmSysModulos>().Count() > 0)
             {
@@ -297,7 +297,9 @@ namespace sysconfig
                 //Habilita Menus
                 sistemaToolStripMenuItem.Enabled = true;
                 usuariosToolStripMenuItem.Enabled = true;
-
+                modulosToolStripMenuItem.Enabled = true;
+                programasToolStripMenuItem.Enabled = true;
+                
                 conn.Close();
             }
             catch (SqlException sqle)
@@ -307,6 +309,8 @@ namespace sysconfig
                 //Desabilita Menus
                 sistemaToolStripMenuItem.Enabled = false;
                 usuariosToolStripMenuItem.Enabled = false;
+                modulosToolStripMenuItem.Enabled = false;
+                programasToolStripMenuItem.Enabled = false;
 
                 lblInfo.Text = "Verifique os parametros de conexão com o banco";
             }
