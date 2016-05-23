@@ -16,6 +16,7 @@ namespace carep3
         /// Variaveis do formulario
         /// </summary>
         private DateTime DataHoje = DateTime.Today;
+        public bool logado = false;
 
         /// <summary>
         /// Construtor do frmLogin
@@ -65,6 +66,36 @@ namespace carep3
         private void timer_Tick(object sender, EventArgs e)
         {
             horaedata();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Models.frmLogin DadosLogin = new Models.frmLogin();
+                DadosLogin.Usu = txtLogin.Text;
+                DadosLogin.Pwd = txtSenha.Text;
+
+                Regras.frmLogin obj = new Regras.frmLogin();
+                obj.validar(DadosLogin);
+                logado = true;
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    btnLogin_Click(sender, e);
+                    break;
+
+            }
         }
     }
 }

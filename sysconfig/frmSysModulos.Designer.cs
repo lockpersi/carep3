@@ -33,6 +33,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAdicionarMod = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAdicionarPermissao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMod)).BeginInit();
             this.gbModulos.SuspendLayout();
             this.SuspendLayout();
@@ -95,12 +96,27 @@
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
+            // btnAdicionarPermissao
+            // 
+            this.btnAdicionarPermissao.Image = global::sysconfig.Properties.Resources.users_edit;
+            this.btnAdicionarPermissao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarPermissao.Location = new System.Drawing.Point(5, 94);
+            this.btnAdicionarPermissao.Name = "btnAdicionarPermissao";
+            this.btnAdicionarPermissao.Size = new System.Drawing.Size(148, 53);
+            this.btnAdicionarPermissao.TabIndex = 7;
+            this.btnAdicionarPermissao.Text = "Permissões";
+            this.btnAdicionarPermissao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarPermissao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdicionarPermissao.UseVisualStyleBackColor = true;
+            this.btnAdicionarPermissao.Click += new System.EventHandler(this.btnAdicionarPermissao_Click);
+            // 
             // frmSysModulos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(818, 347);
+            this.ClientSize = new System.Drawing.Size(814, 343);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAdicionarPermissao);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnAdicionarMod);
             this.Controls.Add(this.btnSair);
@@ -127,5 +143,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnAdicionarMod;
         private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAdicionarPermissao;
     }
 }

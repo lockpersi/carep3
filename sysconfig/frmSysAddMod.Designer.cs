@@ -36,6 +36,8 @@
             this.rbInativo = new System.Windows.Forms.RadioButton();
             this.rbAtivo = new System.Windows.Forms.RadioButton();
             this.gbDadosMod = new System.Windows.Forms.GroupBox();
+            this.txtChamada = new System.Windows.Forms.TextBox();
+            this.lblChamada = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -47,7 +49,7 @@
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Location = new System.Drawing.Point(390, 185);
+            this.btnCancelar.Location = new System.Drawing.Point(390, 216);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 0;
@@ -58,7 +60,7 @@
             // btnAdicionarModulo
             // 
             this.btnAdicionarModulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdicionarModulo.Location = new System.Drawing.Point(274, 185);
+            this.btnAdicionarModulo.Location = new System.Drawing.Point(274, 216);
             this.btnAdicionarModulo.Name = "btnAdicionarModulo";
             this.btnAdicionarModulo.Size = new System.Drawing.Size(110, 23);
             this.btnAdicionarModulo.TabIndex = 1;
@@ -122,6 +124,8 @@
             // 
             // gbDadosMod
             // 
+            this.gbDadosMod.Controls.Add(this.txtChamada);
+            this.gbDadosMod.Controls.Add(this.lblChamada);
             this.gbDadosMod.Controls.Add(this.txtDescricao);
             this.gbDadosMod.Controls.Add(this.lblDescricao);
             this.gbDadosMod.Controls.Add(this.txtNome);
@@ -129,10 +133,28 @@
             this.gbDadosMod.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDadosMod.Location = new System.Drawing.Point(15, 63);
             this.gbDadosMod.Name = "gbDadosMod";
-            this.gbDadosMod.Size = new System.Drawing.Size(450, 116);
+            this.gbDadosMod.Size = new System.Drawing.Size(450, 147);
             this.gbDadosMod.TabIndex = 6;
             this.gbDadosMod.TabStop = false;
             this.gbDadosMod.Text = "Dados do Módulo";
+            // 
+            // txtChamada
+            // 
+            this.txtChamada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChamada.Location = new System.Drawing.Point(9, 120);
+            this.txtChamada.Name = "txtChamada";
+            this.txtChamada.Size = new System.Drawing.Size(423, 20);
+            this.txtChamada.TabIndex = 11;
+            // 
+            // lblChamada
+            // 
+            this.lblChamada.AutoSize = true;
+            this.lblChamada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChamada.Location = new System.Drawing.Point(6, 104);
+            this.lblChamada.Name = "lblChamada";
+            this.lblChamada.Size = new System.Drawing.Size(58, 13);
+            this.lblChamada.TabIndex = 10;
+            this.lblChamada.Text = "Chamada :";
             // 
             // txtDescricao
             // 
@@ -174,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 214);
+            this.ClientSize = new System.Drawing.Size(469, 245);
             this.ControlBox = false;
             this.Controls.Add(this.gbDadosMod);
             this.Controls.Add(this.gbAtivoInativo);
@@ -214,5 +236,7 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblChamada;
+        private System.Windows.Forms.TextBox txtChamada;
     }
 }

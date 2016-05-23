@@ -46,8 +46,10 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(347, 119);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(151, 20);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // txtLogin
             // 
@@ -66,6 +68,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnSair
             // 

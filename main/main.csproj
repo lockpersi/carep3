@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD4B0FA9-B62B-4FEB-B17C-145E160126C5}</ProjectGuid>
+    <ProjectGuid>{7251525A-6365-40FA-B037-2DDCF8F1449B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>carep3</RootNamespace>
-    <AssemblyName>carep3</AssemblyName>
+    <RootNamespace>main</RootNamespace>
+    <AssemblyName>main</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,19 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\frmLogin.cs" />
+    <Compile Include="Models\frmPrincipal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regras\frmLogin.cs" />
-    <Compile Include="StringBD\frmLogin.cs" />
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Regras\frmPrincipal.cs" />
+    <Compile Include="StringBD\frmPrincipal.cs" />
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -68,7 +68,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,24 +82,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fundo_login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\frmLoginFundo.png" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\bd\bd.csproj">
       <Project>{01ed50d8-32ef-4954-8525-d48c8ea2e665}</Project>
       <Name>bd</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\main\main.csproj">
-      <Project>{7251525a-6365-40fa-b037-2ddcf8f1449b}</Project>
-      <Name>main</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\sysconfig\sysconfig.csproj">
-      <Project>{1ab363ea-63ce-4195-80be-c21adbf6fdc5}</Project>
-      <Name>sysconfig</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

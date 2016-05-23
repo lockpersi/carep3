@@ -12,9 +12,12 @@ namespace sysconfig
 {
     public partial class frmSysAddProg : Form
     {
-        public frmSysAddProg()
+        frmSysProgramas frmSysProgPar;
+
+        public frmSysAddProg(frmSysProgramas frmSysProg)
         {
             InitializeComponent();
+            frmSysProgPar = frmSysProg;
         }
 
         /// <summary>
@@ -52,7 +55,23 @@ namespace sysconfig
         /// </summary>
         private void btnAdicionarPrograma_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Models.frmSysProgramas DadosPrograma = new Models.frmSysProgramas();
+                DadosPrograma.Nome_Form = txtNome.Text;
+                DadosPrograma.Form_Descricao = txtDescricao.Text;
+                DadosPrograma.Nome_Chamada = txtChamada.Text;
+                DadosPrograma.Modulo = cbModulos.Text;
+                Regras.frmSysProgramas obj = new Regras.frmSysProgramas();
+                obj.AdicionaPrograma(DadosPrograma);
+                MessageBox.Show("O programa foi adicionado com sucesso");
+                frmSysProgPar.DadosRetorno();
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

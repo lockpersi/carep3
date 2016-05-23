@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace carep3
+namespace main
 {
     static class Program
     {
@@ -16,16 +16,7 @@ namespace carep3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            frmLogin frmLogin = new frmLogin();
-
-            frmLogin.ShowDialog();
-
-            if(frmLogin.logado == true)
-            {
-                main.frmPrincipal obj = new main.frmPrincipal();
-                Application.Run(obj);
-            }
+            Application.Run(new frmPrincipal());
         }
     }
 }

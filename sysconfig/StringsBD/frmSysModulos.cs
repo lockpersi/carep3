@@ -58,11 +58,12 @@ namespace sysconfig.StringsBD
                 }
                 DateTime time = DateTime.Now;
                 string format = "yyyy-MM-dd HH:MM:ss";
-                cmd.CommandText = "insert into mnt_modulo(nome_modulo, descricao, data_cad) " +
-                                  "values (@nome, @descricao, @data);";
+                cmd.CommandText = "insert into mnt_modulo(nome_modulo, descricao, data_cad, chamada) " +
+                                  "values (@nome, @descricao, @data, @chamada);";
                 cmd.Parameters.AddWithValue("@nome", DadosModulo.NomeModulo);
                 cmd.Parameters.AddWithValue("@descricao", DadosModulo.Descricao);
                 cmd.Parameters.AddWithValue("@data", time.ToString(format));
+                cmd.Parameters.AddWithValue("@chamada", DadosModulo.Chamada);
                 cmd.ExecuteScalar();
             }
             catch (SqlException ex)
@@ -89,9 +90,18 @@ namespace sysconfig.StringsBD
                 //command
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+                cmd.CommandText = "select count(*) from mnt_refprograma where id_modulo = '" + idModulo + "';";
+                cn.Open();
+                int resultado = (int)cmd.ExecuteScalar();
+                if (resultado != 0)
+                {
+                    cn.Close();
+                    throw new Exception("Existem programas utilizando essa módulo");
+                }
+                cn.Close();
                 cmd.CommandText = "delete from mnt_modulo where id_modulo = " + idModulo;
                 cn.Open();
-                int resultado = cmd.ExecuteNonQuery();
+                resultado = cmd.ExecuteNonQuery();
                 if (resultado != 1)
                 {
                     throw new Exception("Não foi possível excluir o módulo");
